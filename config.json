@@ -1,0 +1,18 @@
+{
+
+    "Client": {
+
+        "botToken": "BOT_TOKEN",
+        "botPrefix": "BOT_PREFIX",
+        "botClientID": "BOT_ID",
+        "botServerID": "BOT_SERVER_ID"
+
+    },
+
+    "Database": {
+
+        "mongooseURL": "MONGOOSE_URL"
+
+    }
+
+}
