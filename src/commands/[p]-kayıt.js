@@ -7,7 +7,8 @@ const {
     TextInputStyle,
     TextInputBuilder,
     Events,
-    ComponentType
+    ComponentType,
+    PermissionFlagsBits
 } = require("discord.js");
 const Config = require("../../config.json")
 const setupSystem = require("../schemas/setupSystem.js")
@@ -45,6 +46,8 @@ module.exports = {
         return;
       }
       if (!member || !name || !age) return message.react(reject)
+
+      if(!authorizedRoles.some(beş => message.member.roles.cache.get(beş)) && !message.member.permissions.has(PermissionFlagsBits.Administrator)) { return message.react(reject)}
 
         // /////BUTON KISMI////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

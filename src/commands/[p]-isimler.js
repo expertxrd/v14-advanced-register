@@ -20,7 +20,7 @@ module.exports = {
     }
     if(!authorizedRoles.length > 0 ) { return message.react(reject) }
 
-    if(!authorizedRoles.some(beş => message.member.roles.cache.get(beş)) && !message.member.permissions.has(PermissionsBitField.Flags.Administrator)) { return message.react(`<:discotoolsxyzicon2:1177891395617427508>`)}
+    if(!authorizedRoles.some(beş => message.member.roles.cache.get(beş)) && !message.member.permissions.has(PermissionsBitField.Flags.Administrator)) { return message.react(reject)}
 
     if (!setupSystem3 || !setupSystem3.Username.length) {
       message.reply(`${member} kullanıcısına ait herhangi bir veri bulunamadı.`)
